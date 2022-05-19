@@ -1,16 +1,16 @@
 <?php
 
-namespace highjin\QueueMonitor\Controllers;
+namespace napopravku\QueueMonitor\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
-use highjin\QueueMonitor\Controllers\Payloads\Metric;
-use highjin\QueueMonitor\Controllers\Payloads\Metrics;
-use highjin\QueueMonitor\Models\Contracts\MonitorContract;
-use highjin\QueueMonitor\Services\QueueMonitor;
+use napopravku\QueueMonitor\Controllers\Payloads\Metric;
+use napopravku\QueueMonitor\Controllers\Payloads\Metrics;
+use napopravku\QueueMonitor\Models\Contracts\MonitorContract;
+use napopravku\QueueMonitor\Services\QueueMonitor;
 
 class ShowQueueMonitorController
 {

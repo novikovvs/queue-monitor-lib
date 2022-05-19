@@ -1,10 +1,10 @@
 <?php
 
-namespace highjin\QueueMonitor\Controllers;
+namespace napopravku\QueueMonitor\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use highjin\QueueMonitor\Models\Monitor;
+use napopravku\QueueMonitor\Models\Monitor;
 
 class DeleteMonitorController
 {

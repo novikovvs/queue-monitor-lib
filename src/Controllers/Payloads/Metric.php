@@ -1,6 +1,6 @@
 <?php
 
-namespace highjin\QueueMonitor\Controllers\Payloads;
+namespace napopravku\QueueMonitor\Controllers\Payloads;
 
 final class Metric
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace highjin\QueueMonitor\Tests;
+namespace napopravku\QueueMonitor\Tests;
 
-use highjin\QueueMonitor\Models\Monitor;
-use highjin\QueueMonitor\Tests\Support\IntentionallyFailedException;
-use highjin\QueueMonitor\Tests\Support\MonitoredFailingJob;
-use highjin\QueueMonitor\Tests\Support\MonitoredFailingJobWithHugeExceptionMessage;
+use napopravku\QueueMonitor\Models\Monitor;
+use napopravku\QueueMonitor\Tests\Support\IntentionallyFailedException;
+use napopravku\QueueMonitor\Tests\Support\MonitoredFailingJob;
+use napopravku\QueueMonitor\Tests\Support\MonitoredFailingJobWithHugeExceptionMessage;
 
 class MonitorStateHandlingTest extends TestCase
 {

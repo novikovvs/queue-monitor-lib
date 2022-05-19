@@ -1,9 +1,9 @@
 <?php
 
-namespace highjin\QueueMonitor\Models\Contracts;
+namespace napopravku\QueueMonitor\Models\Contracts;
 
 /**
- * @mixin \highjin\QueueMonitor\Models\Monitor
+ * @mixin \napopravku\QueueMonitor\Models\Monitor
  */
 interface MonitorContract
 {

@@ -1,8 +1,8 @@
 <?php
 
-return highjin\Fixer\Config::make()
+return napopravku\Fixer\Config::make()
     ->in(__DIR__)
     ->preset(
-        new highjin\Fixer\Presets\PrettyLaravel()
+        new napopravku\Fixer\Presets\PrettyLaravel()
     )
     ->out();

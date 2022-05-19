@@ -1,6 +1,6 @@
 <?php
 
-namespace highjin\QueueMonitor\Routes;
+namespace napopravku\QueueMonitor\Routes;
 
 use Closure;
 
@@ -15,14 +15,14 @@ class QueueMonitorRoutes
     {
         return function (array $options = []) {
             /** @var \Illuminate\Routing\Router $this */
-            $this->get('', '\highjin\QueueMonitor\Controllers\ShowQueueMonitorController')->name('queue-monitor::index');
+            $this->get('', '\napopravku\QueueMonitor\Controllers\ShowQueueMonitorController')->name('queue-monitor::index');
 
             if (config('queue-monitor.ui.allow_deletion')) {
-                $this->delete('monitors/{monitor}', '\highjin\QueueMonitor\Controllers\DeleteMonitorController')->name('queue-monitor::destroy');
+                $this->delete('monitors/{monitor}', '\napopravku\QueueMonitor\Controllers\DeleteMonitorController')->name('queue-monitor::destroy');
             }
 
             if (config('queue-monitor.ui.allow_purge')) {
-                $this->delete('purge', '\highjin\QueueMonitor\Controllers\PurgeMonitorsController')->name('queue-monitor::purge');
+                $this->delete('purge', '\napopravku\QueueMonitor\Controllers\PurgeMonitorsController')->name('queue-monitor::purge');
             }
         };
     }

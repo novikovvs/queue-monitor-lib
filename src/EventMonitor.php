@@ -1,11 +1,11 @@
 <?php
 
-namespace highjin\QueueMonitor;
+namespace napopravku\QueueMonitor;
 
-use highjin\QueueMonitor\Jobs\EventMonitorJob;
-use highjin\QueueMonitor\Data\MockResultData;
-use highjin\QueueMonitor\Events\MockResultEvent;
-use highjin\QueueMonitor\Models\Monitor;
+use napopravku\QueueMonitor\Jobs\EventMonitorJob;
+use napopravku\QueueMonitor\Data\MockResultData;
+use napopravku\QueueMonitor\Events\MockResultEvent;
+use napopravku\QueueMonitor\Models\Monitor;
 
 class EventMonitor
 {

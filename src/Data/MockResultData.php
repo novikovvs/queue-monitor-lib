@@ -1,6 +1,6 @@
 <?php
 
-namespace highjin\QueueMonitor\Data;
+namespace napopravku\QueueMonitor\Data;
 
 class MockResultData implements AbstractData
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace highjin\QueueMonitor\Tests;
+namespace napopravku\QueueMonitor\Tests;
 
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
-use highjin\QueueMonitor\Models\Monitor;
+use napopravku\QueueMonitor\Models\Monitor;
 
 class MonitorTimeCalculationTest extends TestCase
 {

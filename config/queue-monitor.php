@@ -11,10 +11,10 @@ return [
     /*
      * Set the model used for monitoring.
      * If using a custom model, be sure to implement the
-     *   highjin\QueueMonitor\Models\Contracts\MonitorContract
+     *   napopravku\QueueMonitor\Models\Contracts\MonitorContract
      * interface or extend the base model.
      */
-    'model' => \highjin\QueueMonitor\Models\Monitor::class,
+    'model' => \napopravku\QueueMonitor\Models\Monitor::class,
 
     /*
      * Specify the max character length to use for storing exception backtraces.

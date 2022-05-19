@@ -1,6 +1,6 @@
 <?php
 
-namespace highjin\QueueMonitor\Events;
+namespace napopravku\QueueMonitor\Events;
 
 interface EventInterface
 {

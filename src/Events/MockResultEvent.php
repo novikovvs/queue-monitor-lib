@@ -1,10 +1,10 @@
 <?php
 
-namespace highjin\QueueMonitor\Events;
+namespace napopravku\QueueMonitor\Events;
 
-use highjin\QueueMonitor\Data\AbstractData;
-use highjin\QueueMonitor\Data\MockResultData;
-use highjin\QueueMonitor\Models\Monitor;
+use napopravku\QueueMonitor\Data\AbstractData;
+use napopravku\QueueMonitor\Data\MockResultData;
+use napopravku\QueueMonitor\Models\Monitor;
 
 class MockResultEvent implements EventInterface
 {

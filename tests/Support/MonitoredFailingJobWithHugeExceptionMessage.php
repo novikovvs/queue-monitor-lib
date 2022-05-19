@@ -1,8 +1,8 @@
 <?php
 
-namespace highjin\QueueMonitor\Tests\Support;
+namespace napopravku\QueueMonitor\Tests\Support;
 
-use highjin\QueueMonitor\Traits\IsMonitored;
+use napopravku\QueueMonitor\Traits\IsMonitored;
 
 class MonitoredFailingJobWithHugeExceptionMessage extends BaseJob
 {

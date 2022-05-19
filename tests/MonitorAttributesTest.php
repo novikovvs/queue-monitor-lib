@@ -1,14 +1,14 @@
 <?php
 
-namespace highjin\QueueMonitor\Tests;
+namespace napopravku\QueueMonitor\Tests;
 
-use highjin\QueueMonitor\Models\Monitor;
-use highjin\QueueMonitor\Tests\Support\MonitoredJobWithData;
-use highjin\QueueMonitor\Tests\Support\MonitoredJobWithMergedData;
-use highjin\QueueMonitor\Tests\Support\MonitoredJobWithMergedDataConflicting;
-use highjin\QueueMonitor\Tests\Support\MonitoredJobWithProgress;
-use highjin\QueueMonitor\Tests\Support\MonitoredJobWithProgressCooldown;
-use highjin\QueueMonitor\Tests\Support\MonitoredJobWithProgressCooldownMockingTime;
+use napopravku\QueueMonitor\Models\Monitor;
+use napopravku\QueueMonitor\Tests\Support\MonitoredJobWithData;
+use napopravku\QueueMonitor\Tests\Support\MonitoredJobWithMergedData;
+use napopravku\QueueMonitor\Tests\Support\MonitoredJobWithMergedDataConflicting;
+use napopravku\QueueMonitor\Tests\Support\MonitoredJobWithProgress;
+use napopravku\QueueMonitor\Tests\Support\MonitoredJobWithProgressCooldown;
+use napopravku\QueueMonitor\Tests\Support\MonitoredJobWithProgressCooldownMockingTime;
 
 class MonitorAttributesTest extends TestCase
 {

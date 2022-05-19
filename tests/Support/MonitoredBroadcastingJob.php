@@ -1,6 +1,6 @@
 <?php
 
-namespace highjin\QueueMonitor\Tests\Support;
+namespace napopravku\QueueMonitor\Tests\Support;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;

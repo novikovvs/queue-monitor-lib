@@ -1,6 +1,6 @@
 <?php
 
-namespace highjin\QueueMonitor\Providers;
+namespace napopravku\QueueMonitor\Providers;
 
 use Illuminate\Queue\Events\JobExceptionOccurred;
 use Illuminate\Queue\Events\JobFailed;
@@ -9,9 +9,9 @@ use Illuminate\Queue\Events\JobProcessing;
 use Illuminate\Queue\QueueManager;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use highjin\QueueMonitor\Models\Monitor;
-use highjin\QueueMonitor\Routes\QueueMonitorRoutes;
-use highjin\QueueMonitor\Services\QueueMonitor;
+use napopravku\QueueMonitor\Models\Monitor;
+use napopravku\QueueMonitor\Routes\QueueMonitorRoutes;
+use napopravku\QueueMonitor\Services\QueueMonitor;
 
 class QueueMonitorProvider extends ServiceProvider
 {

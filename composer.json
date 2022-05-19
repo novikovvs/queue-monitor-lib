@@ -1,5 +1,5 @@
 {
-    "name": "highjin/monitor",
+    "name": "napopravku/monitor",
     "description": "Queue Monitoring for Laravel Database Job Queue",
     "type": "library",
     "license": "MIT",
@@ -25,16 +25,16 @@
         "orchestra/testbench": "^3.8|^4.0|^5.0|^6.0",
         "phpstan/phpstan": "^0.12.99|^1.0",
         "phpunit/phpunit": "^8.0|^9.0",
-        "highjin/php-cs-fixer-config": "^3.0"
+        "napopravku/php-cs-fixer-config": "^3.0"
     },
     "autoload": {
         "psr-4": {
-            "highjin\\QueueMonitor\\": "src"
+            "napopravku\\QueueMonitor\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "highjin\\QueueMonitor\\Tests\\": "tests"
+            "napopravku\\QueueMonitor\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -43,7 +43,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "highjin\\QueueMonitor\\Providers\\QueueMonitorProvider"
+                "napopravku\\QueueMonitor\\Providers\\QueueMonitorProvider"
             ]
         }
     },

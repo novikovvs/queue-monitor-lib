@@ -1,6 +1,6 @@
 <?php
 
-namespace highjin\QueueMonitor\Services;
+namespace napopravku\QueueMonitor\Services;
 
 use Illuminate\Contracts\Queue\Job as JobContract;
 use Illuminate\Queue\Events\JobExceptionOccurred;
@@ -8,8 +8,8 @@ use Illuminate\Queue\Events\JobFailed;
 use Illuminate\Queue\Events\JobProcessed;
 use Illuminate\Queue\Events\JobProcessing;
 use Illuminate\Support\Carbon;
-use highjin\QueueMonitor\Models\Contracts\MonitorContract;
-use highjin\QueueMonitor\Traits\IsMonitored;
+use napopravku\QueueMonitor\Models\Contracts\MonitorContract;
+use napopravku\QueueMonitor\Traits\IsMonitored;
 use Throwable;
 
 class QueueMonitor
@@ -22,14 +22,14 @@ class QueueMonitor
     public static $loadMigrations = false;
 
     /**
-     * @var \highjin\QueueMonitor\Models\Contracts\MonitorContract
+     * @var \napopravku\QueueMonitor\Models\Contracts\MonitorContract
      */
     public static $model;
 
     /**
      * Get the model used to store the monitoring data.
      *
-     * @return \highjin\QueueMonitor\Models\Contracts\MonitorContract
+     * @return \napopravku\QueueMonitor\Models\Contracts\MonitorContract
      */
     public static function getModel(): MonitorContract
     {

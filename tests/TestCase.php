@@ -1,14 +1,14 @@
 <?php
 
-namespace highjin\QueueMonitor\Tests;
+namespace napopravku\QueueMonitor\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Support\Facades\DB;
 use InvalidArgumentException;
 use Orchestra\Testbench\TestCase as BaseTestCase;
-use highjin\QueueMonitor\Providers\QueueMonitorProvider;
-use highjin\QueueMonitor\Services\QueueMonitor;
-use highjin\QueueMonitor\Tests\Support\BaseJob;
+use napopravku\QueueMonitor\Providers\QueueMonitorProvider;
+use napopravku\QueueMonitor\Services\QueueMonitor;
+use napopravku\QueueMonitor\Tests\Support\BaseJob;
 
 class TestCase extends BaseTestCase
 {

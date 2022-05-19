@@ -26,7 +26,7 @@
  * THE SOFTWARE.
  */
 
-namespace highjin\QueueMonitor\Services;
+namespace napopravku\QueueMonitor\Services;
 
 class ClassUses
 {

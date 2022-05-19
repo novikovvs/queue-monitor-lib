@@ -1,9 +1,9 @@
 <?php
 
-namespace highjin\QueueMonitor\Traits;
+namespace napopravku\QueueMonitor\Traits;
 
-use highjin\QueueMonitor\Models\Contracts\MonitorContract;
-use highjin\QueueMonitor\Services\QueueMonitor;
+use napopravku\QueueMonitor\Models\Contracts\MonitorContract;
+use napopravku\QueueMonitor\Services\QueueMonitor;
 
 /**
  * @mixin \Illuminate\Queue\InteractsWithQueue

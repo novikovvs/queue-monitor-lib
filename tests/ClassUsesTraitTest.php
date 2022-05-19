@@ -1,11 +1,11 @@
 <?php
 
-namespace highjin\QueueMonitor\Tests;
+namespace napopravku\QueueMonitor\Tests;
 
-use highjin\QueueMonitor\Services\ClassUses;
-use highjin\QueueMonitor\Tests\Support\MonitoredExtendingJob;
-use highjin\QueueMonitor\Tests\Support\MonitoredJob;
-use highjin\QueueMonitor\Traits\IsMonitored;
+use napopravku\QueueMonitor\Services\ClassUses;
+use napopravku\QueueMonitor\Tests\Support\MonitoredExtendingJob;
+use napopravku\QueueMonitor\Tests\Support\MonitoredJob;
+use napopravku\QueueMonitor\Traits\IsMonitored;
 
 class ClassUsesTraitTest extends TestCase
 {

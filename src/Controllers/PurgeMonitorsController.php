@@ -1,11 +1,11 @@
 <?php
 
-namespace highjin\QueueMonitor\Controllers;
+namespace napopravku\QueueMonitor\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use highjin\QueueMonitor\Models\Contracts\MonitorContract;
-use highjin\QueueMonitor\Services\QueueMonitor;
+use napopravku\QueueMonitor\Models\Contracts\MonitorContract;
+use napopravku\QueueMonitor\Services\QueueMonitor;
 
 class PurgeMonitorsController
 {

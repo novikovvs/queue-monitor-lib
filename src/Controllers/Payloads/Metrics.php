@@ -1,16 +1,16 @@
 <?php
 
-namespace highjin\QueueMonitor\Controllers\Payloads;
+namespace napopravku\QueueMonitor\Controllers\Payloads;
 
 final class Metrics
 {
     /**
-     * @var \highjin\QueueMonitor\Controllers\Payloads\Metric[]
+     * @var \napopravku\QueueMonitor\Controllers\Payloads\Metric[]
      */
     public $metrics = [];
 
     /**
-     * @return \highjin\QueueMonitor\Controllers\Payloads\Metric[]
+     * @return \napopravku\QueueMonitor\Controllers\Payloads\Metric[]
      */
     public function all(): array
     {
