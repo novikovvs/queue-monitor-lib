@@ -14,7 +14,7 @@ class EventMonitor
 
         $job = Monitor::ordered()->first(['job_id']);
 
-        if (!$job->job_id){
+        if (!isset($job->job_id)){
             return;
         }
 
