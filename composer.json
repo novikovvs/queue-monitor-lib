@@ -1,5 +1,5 @@
 {
-    "name": "napopravku/monitor",
+    "name": "napopravku/queue-monitor-lib",
     "description": "Queue Monitoring for Laravel Database Job Queue",
     "type": "library",
     "license": "MIT",
