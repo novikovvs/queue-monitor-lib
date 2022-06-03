@@ -2,14 +2,9 @@
 
 namespace napopravku\QueueMonitor\Jobs;
 
-use napopravku\QueueMonitor\Traits\IsMonitored;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Events\Dispatcher;
-use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
 use napopravku\QueueMonitor\Events\EventInterface;
 
 class EventMonitorJob implements ShouldQueue

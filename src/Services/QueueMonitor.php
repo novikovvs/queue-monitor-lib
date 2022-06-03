@@ -9,7 +9,7 @@ use Illuminate\Queue\Events\JobProcessed;
 use Illuminate\Queue\Events\JobProcessing;
 use Illuminate\Support\Carbon;
 use napopravku\QueueMonitor\Models\Contracts\MonitorContract;
-use napopravku\QueueMonitor\Traits\IsMonitored;
+use napopravku\QueueMonitor\Validators\ClassValidator;
 use Throwable;
 
 class QueueMonitor
@@ -163,12 +163,6 @@ class QueueMonitor
 
         $resolvedJob = $job->resolveName();
 
-        if (null === $exception && false === $resolvedJob::keepMonitorOnSuccess()) {
-            $monitor->delete();
-
-            return;
-        }
-
         $attributes = [
             'finished_at' => $now,
             'finished_at_exact' => $now->format(self::TIMESTAMP_EXACT_FORMAT),
@@ -196,8 +190,7 @@ class QueueMonitor
      */
     public static function shouldBeMonitored(JobContract $job): bool
     {
-        return array_key_exists(IsMonitored::class, ClassUses::classUsesRecursive(
-            $job->resolveName()
-        ));
+        $validator = new ClassValidator();
+        return $validator->validate($job->resolveName());
     }
 }
