@@ -54,19 +54,29 @@ class QueueMonitorProvider extends ServiceProvider
         $manager = new QueueManager($this->app);
 
         $manager->before(static function (JobProcessing $event) {
+           $lock = \Illuminate\Support\Facades\Cache::lock('def', 300);
+
+            while(!$lock->get()){
+                usleep(100000);
+            }
+
             QueueMonitor::handleJobProcessing($event);
         });
 
         $manager->after(static function (JobProcessed $event) {
             QueueMonitor::handleJobProcessed($event);
+            \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
+
         });
 
         $manager->failing(static function (JobFailed $event) {
             QueueMonitor::handleJobFailed($event);
+            \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
         });
 
         $manager->exceptionOccurred(static function (JobExceptionOccurred $event) {
             QueueMonitor::handleJobExceptionOccurred($event);
+            \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
         });
     }
 
