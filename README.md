@@ -26,7 +26,7 @@ Add to `bootstrap\app.php`
 ```php
 $app->register(\napopravku\QueueMonitor\Providers\QueueMonitorProvider::class);
 ```
-Create `config\queue-monitor.php` and put (*or copy form* `src\config.php`)
+Create `config\queue-monitor.php` and put (*or copy from* `src\config.php`)
 ```php
 <?php
 
@@ -43,7 +43,7 @@ return [
 
     'ui' => [
         'per_page' => 35,
-        'show_custom_data' => false,
+        'show_custom_data' => true,
         'allow_deletion' => true,
         'allow_purge' => true,
         'show_metrics' => true,
