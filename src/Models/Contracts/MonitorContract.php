@@ -1,9 +1,9 @@
 <?php
 
-namespace napopravku\QueueMonitor\Models\Contracts;
+namespace Napopravku\QueueMonitor\Models\Contracts;
 
 /**
- * @mixin \napopravku\QueueMonitor\Models\Monitor
+ * @mixin \Napopravku\QueueMonitor\Models\Monitor
  */
 interface MonitorContract
 {

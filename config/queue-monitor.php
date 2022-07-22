@@ -11,10 +11,10 @@ return [
     /*
      * Set the model used for monitoring.
      * If using a custom model, be sure to implement the
-     *   napopravku\QueueMonitor\Models\Contracts\MonitorContract
+     *   Napopravku\QueueMonitor\Models\Contracts\MonitorContract
      * interface or extend the base model.
      */
-    'model' => \napopravku\QueueMonitor\Models\Monitor::class,
+    'model' => \Napopravku\QueueMonitor\Models\Monitor::class,
 
     /*
      * Specify the max character length to use for storing exception backtraces.
@@ -34,7 +34,7 @@ return [
         /*
          *  Show custom data stored on model
          */
-        'show_custom_data' => false,
+        'show_custom_data' => true,
 
         /**
          * Allow the deletion of single monitor items.

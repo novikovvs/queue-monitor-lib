@@ -1,11 +1,11 @@
 <?php
 
-namespace napopravku\QueueMonitor\Jobs;
+namespace Napopravku\QueueMonitor\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Events\Dispatcher;
-use napopravku\QueueMonitor\Events\EventInterface;
+use Napopravku\QueueMonitor\Events\EventInterface;
 
 class EventMonitorJob implements ShouldQueue
 {

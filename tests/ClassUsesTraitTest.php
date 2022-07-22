@@ -1,11 +1,11 @@
 <?php
 
-namespace napopravku\QueueMonitor\Tests;
+namespace Napopravku\QueueMonitor\Tests;
 
-use napopravku\QueueMonitor\Services\ClassUses;
-use napopravku\QueueMonitor\Tests\Support\MonitoredExtendingJob;
-use napopravku\QueueMonitor\Tests\Support\MonitoredJob;
-use napopravku\QueueMonitor\Traits\IsMonitored;
+use Napopravku\QueueMonitor\Services\ClassUses;
+use Napopravku\QueueMonitor\Tests\Support\MonitoredExtendingJob;
+use Napopravku\QueueMonitor\Tests\Support\MonitoredJob;
+use Napopravku\QueueMonitor\Traits\IsMonitored;
 
 class ClassUsesTraitTest extends TestCase
 {

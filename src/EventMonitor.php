@@ -1,11 +1,11 @@
 <?php
 
-namespace napopravku\QueueMonitor;
+namespace Napopravku\QueueMonitor;
 
-use napopravku\QueueMonitor\Jobs\EventMonitorJob;
-use napopravku\QueueMonitor\Data\MockResultData;
-use napopravku\QueueMonitor\Events\MockResultEvent;
-use napopravku\QueueMonitor\Models\Monitor;
+use Napopravku\QueueMonitor\Jobs\EventMonitorJob;
+use Napopravku\QueueMonitor\Data\MockResultData;
+use Napopravku\QueueMonitor\Events\MockResultEvent;
+use Napopravku\QueueMonitor\Models\Monitor;
 
 class EventMonitor
 {

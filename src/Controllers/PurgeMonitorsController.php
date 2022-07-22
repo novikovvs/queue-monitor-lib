@@ -1,11 +1,11 @@
 <?php
 
-namespace napopravku\QueueMonitor\Controllers;
+namespace Napopravku\QueueMonitor\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use napopravku\QueueMonitor\Models\Contracts\MonitorContract;
-use napopravku\QueueMonitor\Services\QueueMonitor;
+use Napopravku\QueueMonitor\Models\Contracts\MonitorContract;
+use Napopravku\QueueMonitor\Services\QueueMonitor;
 
 class PurgeMonitorsController
 {

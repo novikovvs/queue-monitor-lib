@@ -5,7 +5,7 @@ This package offers monitoring like [Laravel Horizon](https://laravel.com/docs/h
 ## Installation
 
 ```
-composer require napopravku/laravel-queue-monitor
+composer require Napopravku/laravel-queue-monitor
 ```
 
 ## Configuration
@@ -13,7 +13,7 @@ composer require napopravku/laravel-queue-monitor
 Copy configuration & migration to your project:
 
 ```
-php artisan vendor:publish --provider="napopravku\QueueMonitor\Providers\QueueMonitorProvider"  --tag=config --tag=migrations
+php artisan vendor:publish --provider="Napopravku\QueueMonitor\Providers\QueueMonitorProvider"  --tag=config --tag=migrations
 ```
 
 Migrate the Queue Monitoring table. The table name can be configured in the config file or via the published migration.
@@ -24,7 +24,7 @@ php artisan migrate
 ### Lumen
 Add to `bootstrap\app.php`
 ```php
-$app->register(\napopravku\QueueMonitor\Providers\QueueMonitorProvider::class);
+$app->register(\Napopravku\QueueMonitor\Providers\QueueMonitorProvider::class);
 ```
 Create `config\queue-monitor.php` and put (*or copy from* `src\config.php`)
 ```php
@@ -36,7 +36,7 @@ return [
     'table' => 'queue_monitor',
     'connection' => null,
 
-    'model' => \napopravku\QueueMonitor\Models\Monitor::class,
+    'model' => \Napopravku\QueueMonitor\Models\Monitor::class,
 
     'db_max_length_exception' => 4294967295,
     'db_max_length_exception_message' => 65535,
@@ -54,7 +54,7 @@ return [
 ```
 ## Usage
 
-To monitor a job, simply add the `napopravku\QueueMonitor\Traits\IsMonitored` Trait.
+To monitor a job, simply add the `Napopravku\QueueMonitor\Traits\IsMonitored` Trait.
 
 ```php
 use Illuminate\Bus\Queueable;
@@ -62,7 +62,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use napopravku\QueueMonitor\Traits\IsMonitored; // <---
+use Napopravku\QueueMonitor\Traits\IsMonitored; // <---
 
 class ExampleJob implements ShouldQueue
 {
@@ -100,7 +100,7 @@ You can set a **progress value** (0-100) to get an estimation of a job progressi
 
 ```php
 use Illuminate\Contracts\Queue\ShouldQueue;
-use napopravku\QueueMonitor\Traits\IsMonitored;
+use Napopravku\QueueMonitor\Traits\IsMonitored;
 
 class ExampleJob implements ShouldQueue
 {
@@ -130,7 +130,7 @@ This example job loops through a large amount of users and updates it's progress
 ```php
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Database\Eloquent\Collection;
-use napopravku\QueueMonitor\Traits\IsMonitored;
+use Napopravku\QueueMonitor\Traits\IsMonitored;
 
 class ChunkJob implements ShouldQueue
 {
@@ -161,7 +161,7 @@ To avoid flooding the database with rapidly repeating update queries, you can se
 
 ```php
 use Illuminate\Contracts\Queue\ShouldQueue;
-use napopravku\QueueMonitor\Traits\IsMonitored;
+use Napopravku\QueueMonitor\Traits\IsMonitored;
 
 class LazyJob implements ShouldQueue
 {
@@ -180,7 +180,7 @@ This package also allows setting custom data in array syntax on the monitoring m
 
 ```php
 use Illuminate\Contracts\Queue\ShouldQueue;
-use napopravku\QueueMonitor\Traits\IsMonitored;
+use Napopravku\QueueMonitor\Traits\IsMonitored;
 
 class CustomDataJob implements ShouldQueue
 {
@@ -216,7 +216,7 @@ You can override the `keepMonitorOnSuccess()` method to only store failed monito
 
 ```php
 use Illuminate\Contracts\Queue\ShouldQueue;
-use napopravku\QueueMonitor\Traits\IsMonitored;
+use Napopravku\QueueMonitor\Traits\IsMonitored;
 
 class FrequentSucceedingJob implements ShouldQueue
 {
@@ -232,7 +232,7 @@ class FrequentSucceedingJob implements ShouldQueue
 ### Retrieve processed Jobs
 
 ```php
-use napopravku\QueueMonitor\Models\Monitor;
+use Napopravku\QueueMonitor\Models\Monitor;
 
 $job = Monitor::query()->first();
 
@@ -260,7 +260,7 @@ $job->getBasename();
 ### Model Scopes
 
 ```php
-use napopravku\QueueMonitor\Models\Monitor;
+use Napopravku\QueueMonitor\Models\Monitor;
 
 // Filter by Status
 Monitor::failed();

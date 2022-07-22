@@ -1,16 +1,16 @@
 <?php
 
-namespace napopravku\QueueMonitor\Controllers\Payloads;
+namespace Napopravku\QueueMonitor\Controllers\Payloads;
 
 final class Metrics
 {
     /**
-     * @var \napopravku\QueueMonitor\Controllers\Payloads\Metric[]
+     * @var \Napopravku\QueueMonitor\Controllers\Payloads\Metric[]
      */
     public $metrics = [];
 
     /**
-     * @return \napopravku\QueueMonitor\Controllers\Payloads\Metric[]
+     * @return \Napopravku\QueueMonitor\Controllers\Payloads\Metric[]
      */
     public function all(): array
     {

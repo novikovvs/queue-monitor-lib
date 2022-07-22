@@ -1,6 +1,6 @@
 <?php
 
-namespace napopravku\QueueMonitor\Controllers\Payloads;
+namespace Napopravku\QueueMonitor\Controllers\Payloads;
 
 final class Metric
 {

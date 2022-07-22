@@ -1,6 +1,6 @@
 <?php
 
-namespace napopravku\QueueMonitor\Providers;
+namespace Napopravku\QueueMonitor\Providers;
 
 use Illuminate\Queue\Events\JobExceptionOccurred;
 use Illuminate\Queue\Events\JobFailed;
@@ -9,9 +9,9 @@ use Illuminate\Queue\Events\JobProcessing;
 use Illuminate\Queue\QueueManager;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use napopravku\QueueMonitor\Models\Monitor;
-use napopravku\QueueMonitor\Routes\QueueMonitorRoutes;
-use napopravku\QueueMonitor\Services\QueueMonitor;
+use Napopravku\QueueMonitor\Models\Monitor;
+use Napopravku\QueueMonitor\Routes\QueueMonitorRoutes;
+use Napopravku\QueueMonitor\Services\QueueMonitor;
 
 class QueueMonitorProvider extends ServiceProvider
 {

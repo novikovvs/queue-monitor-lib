@@ -1,6 +1,6 @@
 <?php
 
-namespace napopravku\QueueMonitor\Models;
+namespace Napopravku\QueueMonitor\Models;
 
 use Carbon\CarbonInterval;
 use Exception;
@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
-use napopravku\QueueMonitor\Models\Contracts\MonitorContract;
+use Napopravku\QueueMonitor\Models\Contracts\MonitorContract;
 use Throwable;
 
 /**

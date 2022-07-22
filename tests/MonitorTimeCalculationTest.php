@@ -1,10 +1,10 @@
 <?php
 
-namespace napopravku\QueueMonitor\Tests;
+namespace Napopravku\QueueMonitor\Tests;
 
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Str;
-use napopravku\QueueMonitor\Models\Monitor;
+use Napopravku\QueueMonitor\Models\Monitor;
 
 class MonitorTimeCalculationTest extends TestCase
 {

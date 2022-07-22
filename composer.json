@@ -50,7 +50,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "napopravku\\QueueMonitor\\Providers\\QueueMonitorProvider"
+                "Napopravku\\QueueMonitor\\Providers\\QueueMonitorProvider"
             ]
         }
     },

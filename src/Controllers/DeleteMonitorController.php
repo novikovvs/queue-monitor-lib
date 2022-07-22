@@ -1,10 +1,10 @@
 <?php
 
-namespace napopravku\QueueMonitor\Controllers;
+namespace Napopravku\QueueMonitor\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use napopravku\QueueMonitor\Models\Monitor;
+use Napopravku\QueueMonitor\Models\Monitor;
 
 class DeleteMonitorController
 {

@@ -26,7 +26,7 @@
  * THE SOFTWARE.
  */
 
-namespace napopravku\QueueMonitor\Services;
+namespace Napopravku\QueueMonitor\Services;
 
 class ClassUses
 {

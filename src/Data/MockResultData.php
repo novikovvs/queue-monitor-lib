@@ -1,6 +1,6 @@
 <?php
 
-namespace napopravku\QueueMonitor\Data;
+namespace Napopravku\QueueMonitor\Data;
 
 class MockResultData implements AbstractData
 {

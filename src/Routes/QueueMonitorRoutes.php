@@ -1,6 +1,6 @@
 <?php
 
-namespace napopravku\QueueMonitor\Routes;
+namespace Napopravku\QueueMonitor\Routes;
 
 use Closure;
 
@@ -15,14 +15,14 @@ class QueueMonitorRoutes
     {
         return function (array $options = []) {
             /** @var \Illuminate\Routing\Router $this */
-            $this->get('', '\napopravku\QueueMonitor\Controllers\ShowQueueMonitorController')->name('queue-monitor::index');
+            $this->get('', '\Napopravku\QueueMonitor\Controllers\ShowQueueMonitorController')->name('queue-monitor::index');
 
             if (config('queue-monitor.ui.allow_deletion')) {
-                $this->delete('monitors/{monitor}', '\napopravku\QueueMonitor\Controllers\DeleteMonitorController')->name('queue-monitor::destroy');
+                $this->delete('monitors/{monitor}', '\Napopravku\QueueMonitor\Controllers\DeleteMonitorController')->name('queue-monitor::destroy');
             }
 
             if (config('queue-monitor.ui.allow_purge')) {
-                $this->delete('purge', '\napopravku\QueueMonitor\Controllers\PurgeMonitorsController')->name('queue-monitor::purge');
+                $this->delete('purge', '\Napopravku\QueueMonitor\Controllers\PurgeMonitorsController')->name('queue-monitor::purge');
             }
         };
     }

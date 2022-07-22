@@ -1,8 +1,8 @@
 <?php
 
-namespace napopravku\QueueMonitor\Tests\Support;
+namespace Napopravku\QueueMonitor\Tests\Support;
 
-use napopravku\QueueMonitor\Traits\IsMonitored;
+use Napopravku\QueueMonitor\Traits\IsMonitored;
 
 class MonitoredPartiallyKeptJob extends BaseJob
 {

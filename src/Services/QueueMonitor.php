@@ -1,6 +1,6 @@
 <?php
 
-namespace napopravku\QueueMonitor\Services;
+namespace Napopravku\QueueMonitor\Services;
 
 use Illuminate\Contracts\Queue\Job as JobContract;
 use Illuminate\Queue\Events\JobExceptionOccurred;
@@ -8,8 +8,8 @@ use Illuminate\Queue\Events\JobFailed;
 use Illuminate\Queue\Events\JobProcessed;
 use Illuminate\Queue\Events\JobProcessing;
 use Illuminate\Support\Carbon;
-use napopravku\QueueMonitor\Models\Contracts\MonitorContract;
-use napopravku\QueueMonitor\Validators\ClassValidator;
+use Napopravku\QueueMonitor\Models\Contracts\MonitorContract;
+use Napopravku\QueueMonitor\Validators\ClassValidator;
 use Throwable;
 
 class QueueMonitor
@@ -22,14 +22,14 @@ class QueueMonitor
     public static $loadMigrations = false;
 
     /**
-     * @var \napopravku\QueueMonitor\Models\Contracts\MonitorContract
+     * @var \Napopravku\QueueMonitor\Models\Contracts\MonitorContract
      */
     public static $model;
 
     /**
      * Get the model used to store the monitoring data.
      *
-     * @return \napopravku\QueueMonitor\Models\Contracts\MonitorContract
+     * @return \Napopravku\QueueMonitor\Models\Contracts\MonitorContract
      */
     public static function getModel(): MonitorContract
     {

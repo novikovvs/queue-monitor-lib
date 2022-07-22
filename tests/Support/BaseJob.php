@@ -1,6 +1,6 @@
 <?php
 
-namespace napopravku\QueueMonitor\Tests\Support;
+namespace Napopravku\QueueMonitor\Tests\Support;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

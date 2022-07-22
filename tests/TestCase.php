@@ -1,14 +1,14 @@
 <?php
 
-namespace napopravku\QueueMonitor\Tests;
+namespace Napopravku\QueueMonitor\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Support\Facades\DB;
 use InvalidArgumentException;
 use Orchestra\Testbench\TestCase as BaseTestCase;
-use napopravku\QueueMonitor\Providers\QueueMonitorProvider;
-use napopravku\QueueMonitor\Services\QueueMonitor;
-use napopravku\QueueMonitor\Tests\Support\BaseJob;
+use Napopravku\QueueMonitor\Providers\QueueMonitorProvider;
+use Napopravku\QueueMonitor\Services\QueueMonitor;
+use Napopravku\QueueMonitor\Tests\Support\BaseJob;
 
 class TestCase extends BaseTestCase
 {

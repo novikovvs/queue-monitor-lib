@@ -1,9 +1,9 @@
 <?php
 
-namespace napopravku\QueueMonitor\Validators\Checks;
+namespace Napopravku\QueueMonitor\Validators\Checks;
 
-use napopravku\QueueMonitor\Services\ClassUses;
-use napopravku\QueueMonitor\Traits\IsMonitored;
+use Napopravku\QueueMonitor\Services\ClassUses;
+use Napopravku\QueueMonitor\Traits\IsMonitored;
 use Napopravku\Events\QueueableEvent;
 
 class ClassHeir implements Check
