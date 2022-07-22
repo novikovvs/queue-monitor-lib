@@ -36,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "napopravku\\QueueMonitor\\": "src"
+            "Napopravku\\QueueMonitor\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "napopravku\\QueueMonitor\\Tests\\": "tests"
+            "Napopravku\\QueueMonitor\\Tests\\": "tests"
         }
     },
     "scripts": {
