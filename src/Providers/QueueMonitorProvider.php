@@ -8,6 +8,7 @@ use Illuminate\Queue\Events\JobProcessed;
 use Illuminate\Queue\Events\JobProcessing;
 use Illuminate\Queue\QueueManager;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Napopravku\QueueMonitor\Models\Monitor;
 use Napopravku\QueueMonitor\Routes\QueueMonitorRoutes;
@@ -22,20 +23,14 @@ class QueueMonitorProvider extends ServiceProvider
      */
     public function boot()
     {
-        if ($this->app->runningInConsole()) {
-            if (QueueMonitor::$loadMigrations) {
-                $this->loadMigrationsFrom(
-                    __DIR__ . '/../../migrations'
-                );
-            }
+        $this->publishes([
+            __DIR__ . '/../../migrations' => database_path('migrations'),
+        ], 'migrations');
 
+        if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../../config/queue-monitor.php' => config_path('queue-monitor.php'),
             ], 'config');
-
-            $this->publishes([
-                __DIR__ . '/../../migrations' => database_path('migrations'),
-            ], 'migrations');
 
             $this->publishes([
                 __DIR__ . '/../../views' => resource_path('views/vendor/queue-monitor'),
@@ -53,31 +48,31 @@ class QueueMonitorProvider extends ServiceProvider
         /** @var QueueManager $manager */
         $manager = new QueueManager($this->app);
 
-        $manager->before(static function (JobProcessing $event) {
-           $lock = \Illuminate\Support\Facades\Cache::lock('def', 300);
+        if (Schema::hasTable(config('queue-monitor.table'))) {
+            $manager->before(static function (JobProcessing $event) {
+                $lock = \Illuminate\Support\Facades\Cache::lock('def', 300);
+                while (!$lock->get()) {
+                    usleep(100000);
+                }
 
-            while(!$lock->get()){
-                usleep(100000);
-            }
+                QueueMonitor::handleJobProcessing($event);
+            });
 
-            QueueMonitor::handleJobProcessing($event);
-        });
+            $manager->after(static function (JobProcessed $event) {
+                QueueMonitor::handleJobProcessed($event);
+                \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
+            });
 
-        $manager->after(static function (JobProcessed $event) {
-            QueueMonitor::handleJobProcessed($event);
-            \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
+            $manager->failing(static function (JobFailed $event) {
+                QueueMonitor::handleJobFailed($event);
+                \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
+            });
 
-        });
-
-        $manager->failing(static function (JobFailed $event) {
-            QueueMonitor::handleJobFailed($event);
-            \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
-        });
-
-        $manager->exceptionOccurred(static function (JobExceptionOccurred $event) {
-            QueueMonitor::handleJobExceptionOccurred($event);
-            \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
-        });
+            $manager->exceptionOccurred(static function (JobExceptionOccurred $event) {
+                QueueMonitor::handleJobExceptionOccurred($event);
+                \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
+            });
+        }
     }
 
     /**
