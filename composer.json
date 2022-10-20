@@ -12,7 +12,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/napopravku/events"
+            "url": "https://gitlab.np-internal.ru/napopravku/events"
         }
     ],
     "require": {
@@ -55,6 +55,7 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "gitlab-domains": ["gitlab.np-internal.ru"]
     }
 }
