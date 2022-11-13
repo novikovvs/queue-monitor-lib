@@ -1,9 +1,9 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Traits;
+namespace Novikovvs\QueueMonitor\Traits;
 
-use Napopravku\QueueMonitor\Models\Contracts\MonitorContract;
-use Napopravku\QueueMonitor\Services\QueueMonitor;
+use Novikovvs\QueueMonitor\Models\Contracts\MonitorContract;
+use Novikovvs\QueueMonitor\Services\QueueMonitor;
 
 /**
  * @mixin \Illuminate\Queue\InteractsWithQueue

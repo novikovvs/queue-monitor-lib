@@ -1,9 +1,9 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Validators;
+namespace Novikovvs\QueueMonitor\Validators;
 
-use Napopravku\QueueMonitor\Validators\Checks\ClassHeir;
-use Napopravku\QueueMonitor\Validators\Checks\Check;
+use Novikovvs\QueueMonitor\Validators\Checks\ClassHeir;
+use Novikovvs\QueueMonitor\Validators\Checks\Check;
 
 class ClassValidator
 {

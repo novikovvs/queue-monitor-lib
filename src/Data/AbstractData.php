@@ -1,6 +1,6 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Data;
+namespace Novikovvs\QueueMonitor\Data;
 
 interface AbstractData
 {

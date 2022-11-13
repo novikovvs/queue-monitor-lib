@@ -1,6 +1,6 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Tests\Support;
+namespace Novikovvs\QueueMonitor\Tests\Support;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;

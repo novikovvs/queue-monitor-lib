@@ -11,10 +11,10 @@ return [
     /*
      * Set the model used for monitoring.
      * If using a custom model, be sure to implement the
-     *   Napopravku\QueueMonitor\Models\Contracts\MonitorContract
+     *   Novikovvs\QueueMonitor\Models\Contracts\MonitorContract
      * interface or extend the base model.
      */
-    'model' => \Napopravku\QueueMonitor\Models\Monitor::class,
+    'model' => \Novikovvs\QueueMonitor\Models\Monitor::class,
 
     /*
      * Specify the max character length to use for storing exception backtraces.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Events;
+namespace Novikovvs\QueueMonitor\Events;
 
 interface EventInterface
 {

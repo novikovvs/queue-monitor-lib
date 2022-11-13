@@ -1,6 +1,6 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Validators\Checks;
+namespace Novikovvs\QueueMonitor\Validators\Checks;
 
 interface Check
 {

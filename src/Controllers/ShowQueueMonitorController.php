@@ -1,16 +1,16 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Controllers;
+namespace Novikovvs\QueueMonitor\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
-use Napopravku\QueueMonitor\Controllers\Payloads\Metric;
-use Napopravku\QueueMonitor\Controllers\Payloads\Metrics;
-use Napopravku\QueueMonitor\Models\Contracts\MonitorContract;
-use Napopravku\QueueMonitor\Services\QueueMonitor;
+use Novikovvs\QueueMonitor\Controllers\Payloads\Metric;
+use Novikovvs\QueueMonitor\Controllers\Payloads\Metrics;
+use Novikovvs\QueueMonitor\Models\Contracts\MonitorContract;
+use Novikovvs\QueueMonitor\Services\QueueMonitor;
 
 class ShowQueueMonitorController
 {

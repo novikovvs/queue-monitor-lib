@@ -1,8 +1,8 @@
 <?php
 
-return Napopravku\Fixer\Config::make()
+return Novikovvs\Fixer\Config::make()
     ->in(__DIR__)
     ->preset(
-        new Napopravku\Fixer\Presets\PrettyLaravel()
+        new Novikovvs\Fixer\Presets\PrettyLaravel()
     )
     ->out();

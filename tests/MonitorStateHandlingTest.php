@@ -1,11 +1,11 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Tests;
+namespace Novikovvs\QueueMonitor\Tests;
 
-use Napopravku\QueueMonitor\Models\Monitor;
-use Napopravku\QueueMonitor\Tests\Support\IntentionallyFailedException;
-use Napopravku\QueueMonitor\Tests\Support\MonitoredFailingJob;
-use Napopravku\QueueMonitor\Tests\Support\MonitoredFailingJobWithHugeExceptionMessage;
+use Novikovvs\QueueMonitor\Models\Monitor;
+use Novikovvs\QueueMonitor\Tests\Support\IntentionallyFailedException;
+use Novikovvs\QueueMonitor\Tests\Support\MonitoredFailingJob;
+use Novikovvs\QueueMonitor\Tests\Support\MonitoredFailingJobWithHugeExceptionMessage;
 
 class MonitorStateHandlingTest extends TestCase
 {

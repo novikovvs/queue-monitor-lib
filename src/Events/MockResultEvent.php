@@ -1,8 +1,8 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Events;
+namespace Novikovvs\QueueMonitor\Events;
 
-use Napopravku\QueueMonitor\Data\MockResultData;
+use Novikovvs\QueueMonitor\Data\MockResultData;
 
 class MockResultEvent implements EventInterface
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Tests;
+namespace Novikovvs\QueueMonitor\Tests;
 
 use Illuminate\Routing\Route;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route as RouteFacade;
-use Napopravku\QueueMonitor\Controllers\ShowQueueMonitorController;
+use Novikovvs\QueueMonitor\Controllers\ShowQueueMonitorController;
 
 class RoutesTest extends TestCase
 {
@@ -18,7 +18,7 @@ class RoutesTest extends TestCase
         $this->assertInstanceOf(Route::class, $route = app(Router::class)->getRoutes()->getByAction(ShowQueueMonitorController::class));
 
         $this->assertEquals('jobs', $route->uri);
-        $this->assertEquals('\Napopravku\QueueMonitor\Controllers\ShowQueueMonitorController', $route->getAction('controller'));
+        $this->assertEquals('\Novikovvs\QueueMonitor\Controllers\ShowQueueMonitorController', $route->getAction('controller'));
     }
 
     public function testRouteCreationInNamespace()
@@ -30,6 +30,6 @@ class RoutesTest extends TestCase
         $this->assertInstanceOf(Route::class, $route = app(Router::class)->getRoutes()->getByAction(ShowQueueMonitorController::class));
 
         $this->assertEquals('jobs', $route->uri);
-        $this->assertEquals('\Napopravku\QueueMonitor\Controllers\ShowQueueMonitorController', $route->getAction('controller'));
+        $this->assertEquals('\Novikovvs\QueueMonitor\Controllers\ShowQueueMonitorController', $route->getAction('controller'));
     }
 }

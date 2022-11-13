@@ -1,12 +1,12 @@
 <?php
 
-namespace Napopravku\QueueMonitor;
+namespace Novikovvs\QueueMonitor;
 
 use Illuminate\Support\Facades\Schema;
-use Napopravku\QueueMonitor\Jobs\EventMonitorJob;
-use Napopravku\QueueMonitor\Data\MockResultData;
-use Napopravku\QueueMonitor\Events\MockResultEvent;
-use Napopravku\QueueMonitor\Models\Monitor;
+use Novikovvs\QueueMonitor\Jobs\EventMonitorJob;
+use Novikovvs\QueueMonitor\Data\MockResultData;
+use Novikovvs\QueueMonitor\Events\MockResultEvent;
+use Novikovvs\QueueMonitor\Models\Monitor;
 
 class EventMonitor
 {

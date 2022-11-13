@@ -1,10 +1,10 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Validators\Checks;
+namespace Novikovvs\QueueMonitor\Validators\Checks;
 
-use Napopravku\QueueMonitor\Services\ClassUses;
-use Napopravku\QueueMonitor\Traits\IsMonitored;
-use Napopravku\Events\QueueableEvent;
+use Novikovvs\QueueMonitor\Services\ClassUses;
+use Novikovvs\QueueMonitor\Traits\IsMonitored;
+use Novikovvs\Events\QueueableEvent;
 
 class ClassHeir implements Check
 {

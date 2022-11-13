@@ -1,9 +1,9 @@
 <?php
 
-namespace Napopravku\QueueMonitor\LogHandlers;
+namespace Novikovvs\QueueMonitor\LogHandlers;
 
 use Monolog\Logger;
-use Napopravku\QueueMonitor\EventMonitor;
+use Novikovvs\QueueMonitor\EventMonitor;
 
 class QueueMonitorLogHandler
 {

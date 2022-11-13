@@ -1,15 +1,15 @@
 <?php
 
-namespace Napopravku\QueueMonitor\Tests;
+namespace Novikovvs\QueueMonitor\Tests;
 
-use Napopravku\QueueMonitor\Models\Monitor;
-use Napopravku\QueueMonitor\Tests\Support\MonitoredBroadcastingJob;
-use Napopravku\QueueMonitor\Tests\Support\MonitoredExtendingJob;
-use Napopravku\QueueMonitor\Tests\Support\MonitoredJob;
-use Napopravku\QueueMonitor\Tests\Support\MonitoredJobWithArguments;
-use Napopravku\QueueMonitor\Tests\Support\MonitoredPartiallyKeptFailingJob;
-use Napopravku\QueueMonitor\Tests\Support\MonitoredPartiallyKeptJob;
-use Napopravku\QueueMonitor\Tests\Support\UnmonitoredJob;
+use Novikovvs\QueueMonitor\Models\Monitor;
+use Novikovvs\QueueMonitor\Tests\Support\MonitoredBroadcastingJob;
+use Novikovvs\QueueMonitor\Tests\Support\MonitoredExtendingJob;
+use Novikovvs\QueueMonitor\Tests\Support\MonitoredJob;
+use Novikovvs\QueueMonitor\Tests\Support\MonitoredJobWithArguments;
+use Novikovvs\QueueMonitor\Tests\Support\MonitoredPartiallyKeptFailingJob;
+use Novikovvs\QueueMonitor\Tests\Support\MonitoredPartiallyKeptJob;
+use Novikovvs\QueueMonitor\Tests\Support\UnmonitoredJob;
 
 class MonitorCreationTest extends TestCase
 {
