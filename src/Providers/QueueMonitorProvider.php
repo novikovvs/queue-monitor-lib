@@ -48,31 +48,25 @@ class QueueMonitorProvider extends ServiceProvider
         /** @var QueueManager $manager */
         $manager = new QueueManager($this->app);
 
-        if (Schema::hasTable(config('queue-monitor.table'))) {
-            $manager->before(static function (JobProcessing $event) {
-                $lock = \Illuminate\Support\Facades\Cache::lock('def', 300);
-                while (!$lock->get()) {
-                    usleep(100000);
-                }
-
-                QueueMonitor::handleJobProcessing($event);
-            });
-
-            $manager->after(static function (JobProcessed $event) {
-                QueueMonitor::handleJobProcessed($event);
-                \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
-            });
-
-            $manager->failing(static function (JobFailed $event) {
-                QueueMonitor::handleJobFailed($event);
-                \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
-            });
-
-            $manager->exceptionOccurred(static function (JobExceptionOccurred $event) {
-                QueueMonitor::handleJobExceptionOccurred($event);
-                \Illuminate\Support\Facades\Cache::lock('def')->forceRelease();
-            });
+        if (!Schema::hasTable(config('queue-monitor.table'))) {
+            return;
         }
+
+        $manager->before(static function (JobProcessing $event) {
+            QueueMonitor::handleJobProcessing($event);
+        });
+
+        $manager->after(static function (JobProcessed $event) {
+            QueueMonitor::handleJobProcessed($event);
+        });
+
+        $manager->failing(static function (JobFailed $event) {
+            QueueMonitor::handleJobFailed($event);
+        });
+
+        $manager->exceptionOccurred(static function (JobExceptionOccurred $event) {
+            QueueMonitor::handleJobExceptionOccurred($event);
+        });
     }
 
     /**
@@ -91,3 +85,4 @@ class QueueMonitorProvider extends ServiceProvider
         QueueMonitor::$model = config('queue-monitor.model') ?: Monitor::class;
     }
 }
+

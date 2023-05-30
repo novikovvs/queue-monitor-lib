@@ -2,6 +2,7 @@
 
 namespace Novikovvs\QueueMonitor\Services;
 
+use Napopravku\Events\EsEvents\Common\EsEventSender;
 use Illuminate\Contracts\Queue\Job as JobContract;
 use Illuminate\Queue\Events\JobExceptionOccurred;
 use Illuminate\Queue\Events\JobFailed;
@@ -15,6 +16,8 @@ use Throwable;
 class QueueMonitor
 {
     private const TIMESTAMP_EXACT_FORMAT = 'Y-m-d H:i:s.u';
+
+    public static ?EsEventSender $esEventSender = null;
 
     /**
      * @var bool
@@ -125,6 +128,8 @@ class QueueMonitor
             'started_at_exact' => $now->format(self::TIMESTAMP_EXACT_FORMAT),
             'attempt' => $job->attempts(),
         ]);
+
+        self::registerSingletonEsEventSender();
     }
 
     /**
@@ -176,6 +181,12 @@ class QueueMonitor
                 'exception_class' => get_class($exception),
                 'exception_message' => mb_strcut($exception->getMessage(), 0, config('queue-monitor.db_max_length_exception_message', 65535)),
             ];
+        } else if (self::$esEventSender !== null) {
+            $eventDto = self::$esEventSender->getLastEventDTO();
+
+            if (!empty($eventDto)) {
+                $attributes['data'] = json_encode(self::$esEventSender->getLastEventDTO()->toArray());
+            }
         }
 
         $monitor->update($attributes);
@@ -192,5 +203,18 @@ class QueueMonitor
     {
         $validator = new ClassValidator();
         return $validator->validate($job->resolveName());
+    }
+
+    public static function registerSingletonEsEventSender(): void
+    {
+        $app = app();
+
+        $esEventSender = $app(EsEventSender::class);
+
+        $app->singleton(EsEventSender::class, function () use ($esEventSender) {
+            return $esEventSender;
+        });
+
+        self::$esEventSender = app(EsEventSender::class);
     }
 }
