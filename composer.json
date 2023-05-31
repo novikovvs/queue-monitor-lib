@@ -1,16 +1,22 @@
 {
-    "name": "Novikovvs/queue-monitor-lib",
+    "name": "novikovvs/queue-monitor-lib",
     "description": "Queue Monitoring for Laravel Database Job Queue",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "v.s.novikov",
-            "email": "v.novikov@Novikovvs.ru"
+            "email": "v.novikov@napopravku.ru"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/napopravku/events"
         }
     ],
     "require": {
-        "php": "^7.0|^8.0",
+        "php": "^7.4|^8.0|^8.1",
         "ext-json": "*",
         "ext-mbstring": "*",
         "illuminate/database": "^5.5|^6.0|^7.0|^8.0|^9.0",
@@ -23,7 +29,7 @@
         "illuminate/contracts": "^9.0",
         "laravel/framework": "^5.5|^6.0|^7.0|^8.0|^9.0",
         "mockery/mockery": "^1.3.2",
-        "Novikovvs/events": "dev-master",
+        "napopravku/events": "dev-master",
         "orchestra/testbench": "*",
         "phpstan/phpstan": "^0.12.99|^1.0",
         "phpunit/phpunit": "^8.0|^9.0"
